@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Price Cart</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    .selected {
+      background-color: #007bff;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header">
+            Basic Plan
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">$19.99/month</h5>
+            <ul class="list-group">
+              <li class="list-group-item">10GB Storage</li>
+              <li class="list-group-item">100GB Bandwidth</li>
+              <li class="list-group-item">5 Email Accounts</li>
+              <li class="list-group-item">24/7 Support</li>
+            </ul>
+            <button class="btn btn-primary" onclick="selectPlan(this)">Choose Plan</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header">
+            Pro Plan
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">$39.99/month</h5>
+            <ul class="list-group">
+              <li class="list-group-item">50GB Storage</li>
+              <li class="list-group-item">500GB Bandwidth</li>
+              <li class="list-group-item">20 Email Accounts</li>
+              <li class="list-group-item">24/7 Support</li>
+            </ul>
+            <button class="btn btn-primary" onclick="selectPlan(this)">Choose Plan</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header">
+            Premium Plan
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">$99.99/month</h5>
+            <ul class="list-group">
+              <li class="list-group-item">100GB Storage</li>
+              <li class="list-group-item">1TB Bandwidth</li>
+              <li class="list-group-item">Unlimited Email Accounts</li>
+              <li class="list-group-item">24/7 Support</li>
+            </ul>
+            <button class="btn btn-primary" onclick="selectPlan(this)">Choose Plan</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script>
+    function selectPlan(button) {
+      // Remove 'selected' class from all buttons
+      var buttons = document.querySelectorAll('.btn');
+      buttons.forEach(function(btn) {
+        btn.classList.remove('selected');
+      });
+
+      // Add 'selected' class to the clicked button
+      button.classList.add('selected');
+    }
+  </script>
+</body>
+</html>
